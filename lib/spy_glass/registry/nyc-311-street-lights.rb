@@ -15,7 +15,7 @@ query = {
 }
 
 opts = {
-  path: '/nyc-311-street-light',
+  path: '/nyc-311-street-lights',
   cache: SpyGlass::Cache::Memory.new(expires_in: 300),
   source: 'https://data.cityofnewyork.us/resource/fhrw-4uyv.json?'+ Rack::Utils.build_query(query)
 }
