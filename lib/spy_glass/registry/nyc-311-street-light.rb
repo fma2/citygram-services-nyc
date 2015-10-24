@@ -8,8 +8,8 @@ query = {
     longitude IS NOT NULL AND
     latitude IS NOT NULL AND
     complaint_type = 'Street Light Condition' AND
-    descriptor != '%Fire Alarm Lamp%' AND
-    descriptor != '%Flood Light%' AND
+    descriptor NOT LIKE '%Fire Alarm Lamp%' AND
+    descriptor NOT LIKE '%Flood Light%' AND
     unique_key IS NOT NULL
   WHERE
 }
