@@ -4,7 +4,7 @@ query = {
   '$limit' => 1000,
   '$order' => 'created_date DESC',
   '$where' => <<-WHERE.oneline
-    created_date >= '#{7.days.ago.iso8601}' AND
+    created_date >= '#{SpyGlass::Utils.last_week_floating_timestamp}' AND
     longitude IS NOT NULL AND
     latitude IS NOT NULL AND
     unique_key IS NOT NULL
@@ -14,7 +14,7 @@ query = {
 opts = {
   path: '/nyc-311',
   cache: SpyGlass::Cache::Memory.new(expires_in: 300),
-  source: 'https://data.cityofnewyork.us/resource/erm2-nwe9.json?'+ Rack::Utils.build_query(query)
+  source: 'https://data.cityofnewyork.us/resource/fhrw-4uyv.json?'+ Rack::Utils.build_query(query)
 }
 
 time_zone = ActiveSupport::TimeZone['Eastern Time (US & Canada)']
