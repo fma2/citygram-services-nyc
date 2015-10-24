@@ -4,7 +4,7 @@ query = {
   '$limit' => 1000,
   '$order' => 'created_date DESC',
   '$where' => <<-WHERE.oneline
-    created_date >= '#{7.days.ago.iso8601}' AND
+    created_date >= '#{SpyGlass::Utils.last_week_floating_timestamp}' AND
     longitude IS NOT NULL AND
     latitude IS NOT NULL AND
     complaint_type = 'Street Light Condition' AND
