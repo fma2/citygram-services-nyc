@@ -17,7 +17,7 @@ query = {
 opts = {
   path: '/nyc-311-street-light',
   cache: SpyGlass::Cache::Memory.new(expires_in: 300),
-  source: 'https://data.cityofnewyork.us/resource/erm2-nwe9.json?'+ Rack::Utils.build_query(query)
+  source: 'https://data.cityofnewyork.us/resource/fhrw-4uyv.json?'+ Rack::Utils.build_query(query)
 }
 
 time_zone = ActiveSupport::TimeZone['Eastern Time (US & Canada)']
