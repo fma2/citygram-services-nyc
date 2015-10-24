@@ -22,7 +22,6 @@ time_zone = ActiveSupport::TimeZone['Eastern Time (US & Canada)']
 SpyGlass::Registry << SpyGlass::Client::Socrata.new(opts) do |collection|
   features = collection.map do |item|
     time = Time.iso8601(item['created_date']).in_time_zone(time_zone).strftime("%m/%d  %I:%M %p")
-    city = item['city'].try(:capitalize)
 
     title =
       case item['address_type']
