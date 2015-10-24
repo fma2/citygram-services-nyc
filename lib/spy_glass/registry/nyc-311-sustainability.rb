@@ -7,36 +7,34 @@ query = {
     created_date >= '#{SpyGlass::Utils.last_week_floating_timestamp}' AND
     longitude IS NOT NULL AND
     latitude IS NOT NULL AND
-    
     (
-    (descriptor LIKE '%Air: Open Fire Commercial (AC2)%') OR
-    (descriptor LIKE '%Air: Smoke Chimney or vent (AS1)%') OR
-    (descriptor LIKE '%Air: Smoke Other (Use Comments) (AA5)%') OR
-    (descriptor LIKE '%Air: Open Fire Construction/Demolition (AC4)%') OR
-    (descriptor LIKE '%Air: Open Fire Residential (AC1)%') OR
-    (descriptor LIKE '%Air: Smoke Residential (AA1)%') OR
-    (descriptor LIKE '%Air: Smoke Vehicular (AA4)%') OR
-    (descriptor LIKE '%Air: Odor/Fumes Vehicle Idling (AD3)%') OR
-    (descriptor LIKE '%Air: Smoke Commercial (AA2)%') OR
-    (descriptor LIKE '%Air: Other Air Problem (Use Comments) (AZZ)%') OR
-    (descriptor LIKE '%Recycling Issue%') OR
-    (descriptor LIKE '%Recycling%') OR
-    (descriptor LIKE '%Recycling Issue%') OR
-    (descriptor LIKE '%1RG Missed Recycling Paper%') OR
-    (descriptor LIKE '%2R Bulk-Missed Recy Collection%') OR
-    (descriptor LIKE '%1RO Missed Recycling Organics%') OR
-    (descriptor LIKE '%1RB Missed Recycling - M/G/Pl%') OR
-    (descriptor LIKE '%1R Missed Recycling-All Materials%') OR
-    (descriptor LIKE '%6R Overflowing Recycling Baskets%') OR
-    (descriptor LIKE '%Illegal Use Of A Hydrant (CIN)%') OR
-    (descriptor LIKE '%Wasting Faucets,Sinks,Flushometer,Urinal,Etc. - Private Residence (CWR)%') OR
-    (descriptor LIKE '%Swimming Pool, Illegal Filling - Private Residence (CER)%') OR
-    (descriptor LIKE '%Wasting Faucets,Sinks,Flushometer,Urinal,Etc. - Other (CWO)%') OR
-    (descriptor LIKE '%Illegal Use Of Hose - Private Residence (CCR)%') OR
-    (descriptor LIKE '%Illegal Use Of Hose - Other (CCO)%') OR
-    (descriptor LIKE '%Other Water Waste Problem, (Use Comments) (CZZ)%')
+      (descriptor LIKE '%Air: Open Fire Commercial (AC2)%') OR
+      (descriptor LIKE '%Air: Smoke Chimney or vent (AS1)%') OR
+      (descriptor LIKE '%Air: Smoke Other (Use Comments) (AA5)%') OR
+      (descriptor LIKE '%Air: Open Fire Construction/Demolition (AC4)%') OR
+      (descriptor LIKE '%Air: Open Fire Residential (AC1)%') OR
+      (descriptor LIKE '%Air: Smoke Residential (AA1)%') OR
+      (descriptor LIKE '%Air: Smoke Vehicular (AA4)%') OR
+      (descriptor LIKE '%Air: Odor/Fumes Vehicle Idling (AD3)%') OR
+      (descriptor LIKE '%Air: Smoke Commercial (AA2)%') OR
+      (descriptor LIKE '%Air: Other Air Problem (Use Comments) (AZZ)%') OR
+      (descriptor LIKE '%Recycling Issue%') OR
+      (descriptor LIKE '%Recycling%') OR
+      (descriptor LIKE '%Recycling Issue%') OR
+      (descriptor LIKE '%1RG Missed Recycling Paper%') OR
+      (descriptor LIKE '%2R Bulk-Missed Recy Collection%') OR
+      (descriptor LIKE '%1RO Missed Recycling Organics%') OR
+      (descriptor LIKE '%1RB Missed Recycling - M/G/Pl%') OR
+      (descriptor LIKE '%1R Missed Recycling-All Materials%') OR
+      (descriptor LIKE '%6R Overflowing Recycling Baskets%') OR
+      (descriptor LIKE '%Illegal Use Of A Hydrant (CIN)%') OR
+      (descriptor LIKE '%Wasting Faucets,Sinks,Flushometer,Urinal,Etc. - Private Residence (CWR)%') OR
+      (descriptor LIKE '%Swimming Pool, Illegal Filling - Private Residence (CER)%') OR
+      (descriptor LIKE '%Wasting Faucets,Sinks,Flushometer,Urinal,Etc. - Other (CWO)%') OR
+      (descriptor LIKE '%Illegal Use Of Hose - Private Residence (CCR)%') OR
+      (descriptor LIKE '%Illegal Use Of Hose - Other (CCO)%') OR
+      (descriptor LIKE '%Other Water Waste Problem, (Use Comments) (CZZ)%')
     ) AND
-
     unique_key IS NOT NULL
   WHERE
 }
