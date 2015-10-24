@@ -7,7 +7,7 @@ query = {
     created_date >= '#{SpyGlass::Utils.last_week_floating_timestamp}' AND
     longitude IS NOT NULL AND
     latitude IS NOT NULL AND
-    (complaint_type = 'Graffiti' OR descriptor LIKE 'Graffiti') AND
+    (complaint_type = 'Graffiti' OR descriptor LIKE '%Graffiti%') AND
     unique_key IS NOT NULL
   WHERE
 }
